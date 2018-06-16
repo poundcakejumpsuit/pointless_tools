@@ -37,7 +37,7 @@ def send_mail(send_from, send_to, subject, text, files=None,
                 Name=basename(f)
             )
         # After the file is closed
-        part['Content-Disposition'] = 'attachment; filename="%s"' % basename(f)
+        part['Content-Disposition'] = 'attachment; filename="{}"'.format(basename(f))
         msg.attach(part)
 
 
